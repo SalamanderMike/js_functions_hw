@@ -1,16 +1,21 @@
 // isPrime
 // Michael McClure
-// *** Not finished ***
-var number = 9;
-
 var isPrime = function(number) {
+	var bool = false
+
 	for (var i = 2; i < number; i++) {
 		if ((number % i) === 0) {
-			return "Sorry, Charlie! " + number + " is not prime.";
+			bool = false;
+			break;
 		} else {
-			return number + " is prime!";
+			bool = true;
 		}
+	}
+	if (bool === true) {
+		return number + " is prime!";
+	} else {
+		return "Sorry, Charlie! " + number + " is not prime.";	
 	}
 }
 
-console.log(isPrime(number));
+console.log(isPrime(13));
